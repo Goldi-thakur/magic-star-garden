@@ -1,16 +1,28 @@
-# React + Vite
+# Magic Star Garden 🌱
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Magic Star Garden is an interactive learning game designed for children aged 3–5 years.
 
-Currently, two official plugins are available:
+Children tap to grow plants through different stages:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🌰 Seed → 🌱 Sprout → 🌿 Leafy → 🌷 Bud → 🌸 Bloom
 
-## React Compiler
+The activity uses visual rewards, animations, badges, and positive reinforcement to encourage engagement and exploration.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Interactive tap-based gameplay
+- Plant growth progression system
+- Animated UI elements
+- Child-friendly visual design
+- Achievement badge system
+- Responsive React interface
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- React
+- Vite
+- CSS3
+
+## Purpose
+
+Built as part of the Sprout Mobile Developer evaluation task to demonstrate child-focused interaction design and engaging learning experiences.
