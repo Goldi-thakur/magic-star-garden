@@ -1,0 +1,276 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", "Comic Sans MS", sans-serif;
+  overflow: hidden;
+}
+
+.app {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at top left, #fff4a3 0, transparent 22%),
+    linear-gradient(to bottom, #5ecbff 0%, #b8f2e6 55%, #c9f7a7 100%);
+  padding: 30px;
+}
+
+.game-card {
+  width: min(980px, 92vw);
+  min-height: 680px;
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  padding: 50px 45px;
+  border-radius: 40px;
+  background: rgba(255, 255, 255, 0.32);
+  border: 4px solid rgba(255, 255, 255, 0.75);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.16);
+  backdrop-filter: blur(8px);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(54px, 8vw, 92px);
+  line-height: 0.95;
+  color: #ff4f7b;
+  text-shadow:
+    4px 4px 0 white,
+    8px 8px 0 rgba(111, 77, 255, 0.18);
+}
+
+h1 span {
+  display: block;
+  color: #42c942;
+}
+
+.subtitle {
+  display: inline-block;
+  margin: 30px 0 28px;
+  padding: 14px 30px;
+  font-size: 26px;
+  font-weight: bold;
+  color: white;
+  background: #8b5cf6;
+  border-radius: 22px;
+  box-shadow: 0 8px 0 #6d45d9;
+}
+
+.stars {
+  width: fit-content;
+  margin: 0 auto 34px;
+  padding: 15px 34px;
+  font-size: 34px;
+  font-weight: bold;
+  color: #7b2cbf;
+  background: #fff8d6;
+  border: 3px dashed #ffbe0b;
+  border-radius: 22px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.garden-row {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin: 10px auto 36px;
+}
+
+.plant-box {
+  width: 145px;
+  padding: 18px 12px 14px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 3px solid white;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.plant-box.active {
+  animation: bounce 0.55s ease;
+  background: #fff7c7;
+}
+
+.plant {
+  font-size: 58px;
+  margin-bottom: 12px;
+}
+
+.plant-label {
+  display: inline-block;
+  padding: 8px 18px;
+  font-size: 19px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #ff6b6b, #ffb703);
+  border-radius: 18px;
+}
+
+.plant-btn {
+  margin-top: 8px;
+  padding: 20px 58px;
+  font-size: 34px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(180deg, #62df38, #19b51f);
+  border: 4px solid white;
+  border-radius: 28px;
+  cursor: pointer;
+  box-shadow: 0 10px 0 #0b8c17, 0 18px 28px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+.plant-btn:hover {
+  transform: translateY(-3px) scale(1.03);
+}
+
+.plant-btn:active {
+  transform: translateY(6px);
+  box-shadow: 0 4px 0 #0b8c17;
+}
+
+.celebration-card {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 28px 32px;
+  background: #fff8df;
+  border: 4px solid #ffbe0b;
+  border-radius: 32px;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.16);
+  animation: pop 0.6s ease;
+}
+
+.celebration-card h2 {
+  margin: 0 0 16px;
+  color: #ff4f7b;
+  font-size: 42px;
+}
+
+.flower-line {
+  font-size: 42px;
+  margin: 14px 0;
+}
+
+.celebration-card p {
+  margin: 14px 0;
+  font-size: 28px;
+  font-weight: bold;
+  color: #7b2cbf;
+}
+
+.celebration-card h3 {
+  margin: 18px 0 8px;
+  color: #6d45d9;
+  font-size: 24px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 14px 34px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #7b2cbf;
+  background: #ffe066;
+  border: 3px solid #ffb703;
+  border-radius: 22px;
+}
+
+/* Decorations */
+.sun {
+  position: absolute;
+  top: 38px;
+  left: 45px;
+  font-size: 90px;
+  animation: wiggle 3s infinite ease-in-out;
+}
+
+.cloud {
+  position: absolute;
+  font-size: 78px;
+  opacity: 0.95;
+  animation: float 5s infinite ease-in-out;
+}
+
+.cloud-one {
+  top: 105px;
+  left: 230px;
+}
+
+.cloud-two {
+  top: 65px;
+  right: 210px;
+  animation-delay: 1s;
+}
+
+.rainbow {
+  position: absolute;
+  top: 55px;
+  right: 45px;
+  font-size: 105px;
+}
+
+.butterfly {
+  position: absolute;
+  top: 220px;
+  right: 210px;
+  font-size: 58px;
+  animation: butterflyMove 4s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(0.6) translateY(20px);
+  }
+  60% {
+    transform: scale(1.18) translateY(-8px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.75);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.06);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(-8deg) scale(1);
+  }
+  50% {
+    transform: rotate(8deg) scale(1.06);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(18px);
+  }
+}
+
+@keyframes butterflyMove {
+  0%, 100% {
+    transform: translate(0, 0) rotate(-8deg);
+  }
+  50% {
+    transform: translate(-28px, 18px) rotate(10deg);
+  }
+}
